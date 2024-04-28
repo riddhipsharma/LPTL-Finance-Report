@@ -1,0 +1,23 @@
+{% extends 'dummyCostCode/base.html' %}
+{% block content %}
+    <h4  class="heading">compPrevDetChangesAndCurDetAll</h4>
+
+
+    <form action="{% url "dummyCostCode:compPrevDetChangesAndCurDetAll" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_DET_CHANGES_VW of current month : </label>&nbsp;&nbsp;
+            <input type="file" title="Upload QTS_LPTL_COSTCENTER_BILLING_DET_CHANGES_VW file" name="excel_file1"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW file of previous month: </label> &nbsp; &nbsp;
+            <input type="file" title="Upload QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW file" name="excel_file2"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <br>
+        <br>
+        <input type="submit" class="submit" value="Upload"
+            style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+    </form>
+{% endblock %}

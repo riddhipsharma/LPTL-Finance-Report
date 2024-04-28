@@ -1,0 +1,47 @@
+{% extends 'dummyCostCode/base.html' %}
+{% block content %}
+    <h4 class="heading">Comparing Sum and Details</h4>
+
+
+    <form action="{% url "dummyCostCode:compSumAndDetail" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW : </label>&nbsp;&nbsp;
+            <input type="file" title="Upload QTS_LPTL_SAMPLES_RESULTS_ALL_DATES file" name="excel_file1"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_DETAIL_VW : </label> &nbsp; &nbsp;
+            <input type="file" title="Upload QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW file" name="excel_file2"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_DET_CHANGES_VW : </label>&nbsp;&nbsp;
+            <input type="file" title="Upload QTS_LPTL_SAMPLES_RESULTS_ALL_DATES file" name="excel_file3"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_SUM_ALL_VW : </label> &nbsp; &nbsp;
+            <input type="file" title="Upload QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW file" name="excel_file4"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILLING_SUMMARY_VW : </label>&nbsp;&nbsp;
+            <input type="file" title="Upload QTS_LPTL_SAMPLES_RESULTS_ALL_DATES file" name="excel_file5"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>QTS_LPTL_COSTCENTER_BILL_SUM_CHANGES_VW : </label> &nbsp; &nbsp;
+            <input type="file" title="Upload QTS_LPTL_COSTCENTER_BILLING_DET_ALL_VW file" name="excel_file6"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <br>
+        <br>
+        <input type="submit" class="submit" value="Upload"
+            style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+    </form>
+    
+    <p class="result">RESULT for detAll=sumAll and det=sum and detChanges=sumChanges</p>
+    {% block innercompdetsumcontent %}
+    {% endblock %}
+{% endblock %}

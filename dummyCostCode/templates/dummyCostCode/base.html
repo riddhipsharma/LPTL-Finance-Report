@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LPTL Finance Report</title>
+    <link rel="stylesheet" href="{% static 'css/dummyCostCode.css' %}">
+</head>
+
+<body>
+    <nav>
+        <a href="{% url "dummyCostCode:post_list" %}">DummyCostCenter</a>|
+        <a href="{% url "dummyCostCode:sampleResultsAllDates" %}">SampleResultsAllDates</a>|
+        <!-- <a href="{% url "dummyCostCode:calculateTotalBillingAmountDetail" %}">Calculatetotal</a>| -->
+        <a href="{% url "dummyCostCode:compSumAndDetail" %}">compSumAndDetail</a>|
+        <a href="{% url "dummyCostCode:compPrevDetChangesAndCurDetAll" %}">compPrevDetChangesAndCurDetAll</a>|
+        <a href="{% url "dummyCostCode:finalReport" %}">finalReport</a>|
+    </nav>
+    <br>
+    <br>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% extends 'dummyCostCode/base.html' %}
+{% block content %}
+    <h4 class="heading">GENERATE&nbsp;&nbsp;DUMMY&nbsp;&nbsp;COST&nbsp;&nbsp;CENTER&nbsp;&nbsp;FILE</h4>
+
+
+    <form action="{% url "dummyCostCode:post_list" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label>Previous file : </label>&nbsp;&nbsp;
+            <input type="file" title="Upload previous month excel file" name="excel_file1"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <p>
+            <label>Current file : </label> &nbsp; &nbsp;
+            <input type="file" title="Upload current month excel file" name="excel_file2"
+                style="border: 1px solid black; padding: 5px;" required="required">
+        </p>
+        <br>
+        <br>
+        <input type="submit" class="submit" value="Upload"
+            style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+    </form>
+
+{% endblock %}

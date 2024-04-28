@@ -1,0 +1,48 @@
+body {
+    background-color: #0f405c;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.heading {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aqua;
+
+}
+
+label{
+    font-size: 1rem;
+}
+
+.result{
+    font-size: 1rem;
+    color: aquamarine;
+    font-weight: 100;
+    text-align: center;
+}
+
